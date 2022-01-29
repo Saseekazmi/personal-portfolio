@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Saseek Azmi</title>
-    <script src="https://kit.fontawesome.com/583be7a33b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" type="text/css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/583be7a33b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
             </div>
             <div id="menu">
                 <ul class="navlist">
-                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#Welcome-section">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -28,9 +30,15 @@
             </div>
         </nav>
     </header>
-    <main></main>
-    <footer>
+    <main>
+        <div id="Welcome-section">
+            <h1>MOHAMED <span class="screen-line-break"></span>SASEEK AZMI</h1>
+            <p>A Self-taught Web developer looking for an opputunity to grow up</p>
+            <a class="resume-btn" target="_blank" href="../src/Mohamed_Saseek_Azmi_Resume_V1.pdf">Resume</a>
 
+        </div>
+    </main>
+    <footer>
         <div class="container">
             <p>Designed and Developed by <span class="screen-line-break"></span>Mohamed Saseek Azmi</span> </p>
             <p><a href="https://www.freecodecamp.org/saseekazmi" class="profile-link" target="_blank"><i
@@ -42,14 +50,7 @@
             </p>
         </div>
     </footer>
-    <script>
-        const toggleBtn = document.querySelector('#toggle-menu-btn');
-        const mobileMenu = document.querySelector('#menu .navlist');
-        console.log(toggleBtn, mobileMenu)
-        toggleBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hide');
-        })
-    </script>
+    <script src="../src/index.js"></script>
 </body>
 
 </html>
