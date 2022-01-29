@@ -25,6 +25,12 @@ footer {
   width: 100%;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
 #navbar {
   margin: 0;
   padding: 0 0.75rem;
@@ -33,7 +39,6 @@ footer {
   align-items: center;
   justify-content: space-between;
   border-bottom: 3px solid red;
-  z-index: 999;
 }
 
 #logo a {
@@ -109,12 +114,39 @@ footer {
   box-shadow: 7px 4px 6px 0px #0f0f13;
 }
 
+.content {
+  padding: 5% 10%;
+  font-size: 1.1em;
+  color: grey;
+  padding-top: 70px;
+}
+
+.content h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 2em;
+  margin: 0;
+  color: #fa2a2ae8;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 200px;
+  margin: 20px;
+  border: 3px #9a9a9a solid;
+}
+
+.about-title {
+  font-size: 1.5em;
+}
+.job-title {
+  font-size: 1.2rem;
+  display: block;
+}
 footer {
   border-top: 3px solid red;
   text-align: center;
   padding: 0.5em;
-  line-height: 1.5rem;
-  font-size: 0.95em;
+  line-height: 1.2rem;
 }
 
 footer .profile-link {
@@ -144,7 +176,7 @@ footer .profile-link:focus {
 
 @media screen and (min-width: 800px) {
   #navbar {
-    padding: 0 1rem;
+    padding: 0 3rem;
     font-size: 1.5rem;
   }
   #toggle-menu-btn {
@@ -170,6 +202,12 @@ footer .profile-link:focus {
     height: 100vh;
     font-size: 1.5rem;
   }
+
+  .content > p {
+    padding: 0 10%;
+    line-height: 1.5em;
+  }
+
   .screen-line-break {
     display: none;
   }
