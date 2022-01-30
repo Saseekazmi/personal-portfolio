@@ -97,7 +97,7 @@ header {
 }
 
 #Welcome-section h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
 }
 
@@ -115,10 +115,17 @@ header {
 }
 
 .content {
-  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 10% 0 10%;
   font-size: 1.1em;
   color: grey;
   padding-top: 70px;
+}
+
+.content hr {
+  width: 100%;
 }
 
 .content h2 {
@@ -141,6 +148,42 @@ header {
 .job-title {
   font-size: 1.2rem;
   display: block;
+}
+
+.project-tile {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5% 0px;
+}
+.project-tile > div {
+  margin: 5%;
+  transition: 0.5s ease;
+}
+.project-tile > div:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease;
+}
+
+.project-tile > div a {
+  width: 100%;
+  display: block;
+  border: 1px #9a9a9a solid;
+  box-shadow: 1;
+  box-shadow: 4px 5px 6px 0px #0f0f13a8;
+}
+
+.project-tile > div img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.project-tile > div:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+  box-shadow: 6px 5px 7px 0px #0f0f13a8;
 }
 footer {
   border-top: 3px solid red;
@@ -203,9 +246,20 @@ footer .profile-link:focus {
     font-size: 1.5rem;
   }
 
-  .content > p {
+  .content p {
     padding: 0 10%;
     line-height: 1.5em;
+  }
+
+  .project-tile > div {
+    width: 48%;
+    height: auto;
+    margin: 1%;
+  }
+
+  .project-tile > div:hover {
+    transform: scale(1.02);
+    transition: 0.5s ease;
   }
 
   .screen-line-break {
