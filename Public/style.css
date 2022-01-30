@@ -89,7 +89,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../src/Home-background.jpg") center no-repeat;
+  background: url("./src/Home-background.jpg") center no-repeat;
   background-size: 1920px 1080px;
   padding: 5%;
   height: 100vh;
