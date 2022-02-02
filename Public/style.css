@@ -7,6 +7,8 @@
 :root {
   --primary-background: white;
   --secondary-background: #1f1f24;
+  --btn-highlight-clr: #db1717e8;
+  --btn-clr: #b91a1a;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -100,8 +102,12 @@ header {
   margin: 0;
 }
 
-.resume-btn {
+.btn {
   color: white;
+  background-color: var(--btn-clr);
+}
+
+.resume {
   text-shadow: none;
   text-decoration: none;
   padding: 10px;
@@ -109,14 +115,19 @@ header {
   position: relative;
   top: 5%;
   z-index: 0;
-  background-color: #ff2c2ce8;
   box-shadow: 7px 4px 6px 0px #0f0f13;
   transition: 0.5s ease;
 }
 
-.resume-btn:hover,
-.resume-btn:focus {
-  transform: scale(0.95);
+.resume:hover,
+.resume:focus {
+  transform: scale(1.1);
+}
+
+.btn:hover,
+.btn:focus {
+  outline: 0;
+  background-color: var(--btn-highlight-clr);
 }
 
 .content {
@@ -149,9 +160,11 @@ header {
   border: 3px #9a9a9a solid;
 }
 
-.about-title {
-  font-size: 1.5em;
+.about-title,
+.form-title {
+  font-size: 1.4em;
   line-height: 1.2em;
+  color: #5b5b5c;
 }
 .job-title {
   font-size: 0.75em;
@@ -160,13 +173,13 @@ header {
 
 .project-tile {
   display: flex;
-  max-width: 100%;
+  max-width: 850px;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5% 0px;
 }
 .project-tile > div {
-  margin: 5%;
+  margin: 5% 10%;
   transition: 0.5s ease;
 }
 .project-tile > div:hover {
@@ -189,36 +202,74 @@ header {
 }
 
 .project-tile > div:hover {
+  outline: 0;
   transform: scale(1.1);
   transition: 0.5s ease;
   box-shadow: 6px 5px 7px 0px #0f0f13a8;
+}
+
+form {
+  width: 100%;
+  max-width: 650px;
+  margin: 1rem 0;
+}
+.form-group {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.form-group label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #0f0f13;
+  margin: 0.75em 0;
+}
+
+.form-group > *:not(label) {
+  padding: 1em;
+  border: 1px solid #d2d6dc;
+  border-radius: 5px;
+}
+
+.form-group *:not(label):focus {
+  outline: none;
+  box-shadow: 0px 0px 6px 4px #ebe5e5;
 }
 
 .contact-icons {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
-  margin: 5% 0;
+  justify-content: center;
   align-items: center;
+  max-width: 650px;
 }
 
-.contact-icons > div {
+.contact-icons div {
+  margin: 1rem;
+}
+
+.contact-icons a {
   display: inline-flex;
   background-color: #faebc752;
-  padding: 7%;
+  padding: 1rem;
   border-radius: 50%;
   margin: 2%;
   color: #ff2c2ce8;
+  text-decoration: none;
 }
 
-.contact-icons > div:hover {
+.contact-icons a:hover {
   background-color: #333844;
   color: white;
 }
 
 footer {
   border-top: 3px solid red;
+  margin-top: 1rem;
   text-align: center;
   padding: 0.5em;
   line-height: 1.2rem;
@@ -279,6 +330,7 @@ footer .profile-link:focus {
   }
 
   .content p {
+    max-width: 1200px;
     padding: 0 10%;
     line-height: 1.5rem;
   }
