@@ -183,18 +183,22 @@ header {
 .project-tile > div {
   margin: 5% 10%;
   transition: 0.5s ease;
-}
-.project-tile > div:hover {
-  transform: scale(1.02);
-  transition: 0.5s ease;
+  position: relative;
 }
 
 .project-tile > div a {
   width: 100%;
-  display: block;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border: 1px #9a9a9a solid;
-  box-shadow: 1;
+  background-color: rgba(0, 0, 0, 0.65);
   box-shadow: 4px 5px 6px 0px #0f0f13a8;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .project-tile > div img {
@@ -203,11 +207,18 @@ header {
   height: auto;
 }
 
-.project-tile > div:hover {
-  outline: 0;
+.project-tile > div:hover,
+.project-tile > div:focus {
   transform: scale(1.1);
-  transition: 0.5s ease;
   box-shadow: 6px 5px 7px 0px #0f0f13a8;
+}
+
+.project-tile > div:hover a,
+.project-tile > div:focus a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 form {
