@@ -184,6 +184,8 @@ header {
   margin: 5% 10%;
   transition: 0.5s ease;
   position: relative;
+  box-shadow: 4px 5px 6px 0px #0f0f13a8;
+  border: 1px #9a9a9a solid;
 }
 
 .project-tile > div a {
@@ -192,9 +194,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  border: 1px #9a9a9a solid;
   background-color: rgba(0, 0, 0, 0.65);
-  box-shadow: 4px 5px 6px 0px #0f0f13a8;
   color: white;
   font-size: 1.2em;
   font-weight: 500;
